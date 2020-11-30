@@ -1,0 +1,11 @@
+.menu {
+    &__open {
+        background-image: url('/menu_open-24px.svg');
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position-x: center;
+        background-position-y: center;
+        height: 30px;
+        width: 30px;
+    }
+}
