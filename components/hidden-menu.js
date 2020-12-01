@@ -3,21 +3,21 @@ import menuButtons from '../config/menu-buttons';
 import Link from 'next/link';
 import styles from './hidden-menu.module.scss';
 
+const visible = 'visible';
+const hidden = 'hidden';
+
 export default function HiddenMenu() {
-	const [visible, setVisible] = useState(false);
-	const currentContentStyle = 'hidden-menu__contents--'.concat(
-		visible ? 'visible' : 'hidden'
-	);
+	const [visibility, setVisibility] = useState(hidden);
 	const contentStyle = [
 		styles['hidden-menu__contents'],
-		styles[currentContentStyle],
+		styles['hidden-menu__contents--'.concat(visibility)],
 	].join(' ');
 
 	return (
 		<div>
 			<button
 				className={styles['hidden-menu__open']}
-				onClick={() => setVisible(!visible)}
+				onClick={() => setVisibility(visible)}
 			/>
 			<div className={contentStyle}>
 				{menuButtons.map((item, i) => (
@@ -28,7 +28,7 @@ export default function HiddenMenu() {
 					</Link>
 				))}
 				<button
-					onClick={() => setVisible(false)}
+					onClick={() => setVisibility(hidden)}
 					className={styles['hidden-menu__close']}
 				>
 					Fechar Menu
