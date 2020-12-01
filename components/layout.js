@@ -6,7 +6,7 @@ import './header.module.scss';
 export default function Layout({ children }) {
 	return (
 		<div>
-			<Header></Header>
+			<Header />
 			{children}
 		</div>
 	);

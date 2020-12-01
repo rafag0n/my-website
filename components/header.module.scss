@@ -1,6 +1,19 @@
 .header {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: auto min-content min-content;
+    padding: 25px;
+    padding-top: 30px;
     
     &__logo {
+        height: 30px;
     }
 
+    @media screen and ( min-width:1200px ) {
+        padding: 55px;
+        
+        &__logo {
+            height: 40px;
+        }
+    }
 }

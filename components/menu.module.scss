@@ -1,11 +1,20 @@
 .menu {
-    &__open {
-        background-image: url('/menu_open-24px.svg');
-        background-repeat: no-repeat;
-        background-size: 30px;
-        background-position-x: center;
-        background-position-y: center;
-        height: 30px;
-        width: 30px;
+    
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, min-content);;
+    column-gap: 25px;
+
+    &__item {
+        font-weight: 200;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        white-space: nowrap;
+    }
+
+
+    @media screen and (max-width: 1200px) {
+        display: none;
     }
 }
