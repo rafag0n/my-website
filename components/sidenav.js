@@ -17,9 +17,10 @@ export default function SideNav() {
 		<div>
 			<button
 				className={styles.sidenav__open}
+				data-testid="sidenav__open"
 				onClick={() => setVisibility(visible)}
 			/>
-			<div className={contentStyle}>
+			<div data-testid="sidenav__contents" className={contentStyle}>
 				{menuButtons.map((item, i) => (
 					<Link key={i} href={item.url}>
 						<button className={styles.sidenav__button}>
@@ -30,6 +31,7 @@ export default function SideNav() {
 				<button
 					onClick={() => setVisibility(hidden)}
 					className={styles.sidenav__close}
+					data-testid="sidenav__close"
 				>
 					Fechar Menu
 				</button>

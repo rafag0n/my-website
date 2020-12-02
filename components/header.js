@@ -6,7 +6,7 @@ import SideNav from './sidenav.js';
 export default function Header() {
 	return (
 		<header className={styles.header}>
-			<img src="/logo.svg" className={styles.header__logo} />
+			<img src="/logo.svg" data-testid="header" className={styles.header__logo} />
 			<SideNav />
 			<Menu />
 		</header>

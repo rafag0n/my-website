@@ -1,0 +1,21 @@
+.sliding_image {
+	width: inherit;
+	height: inherit;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+
+	&__contents {
+		height: inherit;
+		width: 250%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	@media screen and (min-width: 1200px) {
+		&__contents {
+			width: 100%;
+		}
+	}
+}
