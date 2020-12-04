@@ -4,13 +4,13 @@ import styles from './sliding-image.scss';
 export default function SlidingImage({
 	speed = 1.0,
 	imgUrl = '/home-page.jpg',
-	maxScroll = 200,
+	maxScroll = 250,
 }) {
 	const [marginLeft, setMarginLeft] = useState(0);
 
 	const handleScroll = () => {
 		if (window.innerWidth < 800) {
-			setMarginLeft(Math.min(-window.scrollY * speed, maxScroll));
+			setMarginLeft(Math.max(-window.scrollY * speed, -maxScroll));
 		}
 	};
 

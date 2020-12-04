@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.scss';
 import Header from '../components/header';
 import Headline from '../components/headline';
 import SlidingImage from '../components/sliding-image';
+import Works from '../components/Works';
 
 export default function Home() {
 	return (
@@ -22,6 +23,7 @@ export default function Home() {
 					<Header />
 					<Headline />
 					<SlidingImage />
+					<Works />
 				</div>
 			</main>
 		</div>

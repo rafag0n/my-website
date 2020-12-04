@@ -1,0 +1,28 @@
+.works {
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+
+	&__title {
+		font-weight: 300;
+	}
+
+	&__author,
+	&__role {
+		padding: 0px;
+		margin: 0px;
+		align-self: flex-end;
+	}
+
+	&__author {
+		margin-top: 15px;
+	}
+
+	&__role {
+		margin-bottom: 15px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding: 55px;
+	}
+}
