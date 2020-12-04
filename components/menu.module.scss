@@ -1,20 +1,21 @@
 .menu {
-    
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(3, min-content);;
-    column-gap: 25px;
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(3, min-content);
+	column-gap: 25px;
 
-    &__item {
-        font-weight: 200;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        white-space: nowrap;
-    }
+	&__item {
+		color: #474747;
+		font-weight: 400;
+		font-size: 1rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		text-decoration: none;
+		white-space: nowrap;
+		border: none;
+	}
 
-
-    @media screen and (max-width: 1200px) {
-        display: none;
-    }
+	@media screen and (max-width: 1200px) {
+		display: none;
+	}
 }

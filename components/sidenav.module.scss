@@ -1,67 +1,68 @@
 .sidenav {
+	&__open {
+		background-image: url('/menu_open-24px.svg');
+		background-repeat: no-repeat;
+		background-size: 30px;
+		background-position-x: center;
+		background-position-y: center;
+		height: 30px;
+		width: 30px;
+	}
 
-    &__open {
-        background-image: url('/menu_open-24px.svg');
-        background-repeat: no-repeat;
-        background-size: 30px;
-        background-position-x: center;
-        background-position-y: center;
-        height: 30px;
-        width: 30px;
-    }
+	&__open:hover {
+		cursor: pointer;
+	}
 
-    &__open:hover {
-        cursor: pointer;
-    }
+	&__contents {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		overflow-x: hidden;
+		background-color: rgb(59, 59, 59);
+		height: 100%;
+		display: grid;
+		grid-auto-rows: 30px;
+		justify-content: left;
+		row-gap: 15px;
 
-    &__contents {
-        -webkit-box-sizing: border-box; 
-        -moz-box-sizing: border-box;    
-        box-sizing: border-box; 
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        overflow-x: hidden;
-        background-color: rgb(59, 59, 59);
-        height: 100%;
-        display: grid;
-        grid-auto-rows: 30px;
-        justify-content: left;
-        row-gap: 10px;
+		&--hidden {
+			width: 0px;
+			margin-left: 0px;
+			transition: 0.5s;
+		}
 
-        &--hidden {
-            width: 0px;
-            margin-left: 0px;
-            transition: 0.5s;
-        }
+		&--visible {
+			width: 250px;
+			margin-left: 250px;
+			transition: width 0.5s, margin-left 0.5s;
+		}
+	}
 
-        &--visible {
-            width: 250px;
-            margin-left: 250px;
-            transition: width .5s, margin-left .5s;
-        }
-    }
+	&__button,
+	&__close {
+		font-size: 0.9rem;
+		margin-left: 15px;
+		margin-top: 40px;
+		color: white;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		white-space: nowrap;
+		text-align: left;
+		border: none;
+	}
 
-    &__button, &__close  {
-        margin-left: 15px;
-        margin-top: 30px;
-        color: white;
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        white-space: nowrap;
-        text-align: left;
-    }
+	&__close {
+		color: rgb(206, 206, 206);
+	}
 
-    &__close {
-        color: rgb(206, 206, 206);
-    }
-    
-    @media screen and (min-width: 1200px) {
-        &__open {
-            display: none;
-        }
-    }
-
+	@media screen and (min-width: 1200px) {
+		&__open {
+			display: none;
+		}
+	}
 }

@@ -9,7 +9,9 @@ export default function SlidingImage({
 	const [marginLeft, setMarginLeft] = useState(0);
 
 	const handleScroll = () => {
-		setMarginLeft(Math.min(-window.scrollY * speed, maxScroll));
+		if (window.innerWidth < 800) {
+			setMarginLeft(Math.min(-window.scrollY * speed, maxScroll));
+		}
 	};
 
 	useEffect(() => {

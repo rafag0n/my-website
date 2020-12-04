@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import Header from '../components/header';
+import Headline from '../components/headline';
 import SlidingImage from '../components/sliding-image';
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
 				<title>Create Next App</title>
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link
-					href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+					href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
 					rel="stylesheet"
 				/>
 				<link rel="icon" href="/favicon.ico" />
@@ -19,6 +20,7 @@ export default function Home() {
 			<main className={styles.main} data-testid="main">
 				<div className={styles.top_wrapper}>
 					<Header />
+					<Headline />
 					<SlidingImage />
 				</div>
 			</main>

@@ -1,0 +1,26 @@
+.headline {
+	padding: 30px;
+	padding-top: 0px;
+	display: flex;
+	flex-direction: column;
+
+	& button {
+		font-size: 0.8rem;
+		font-weight: 400;
+		align-self: flex-end;
+		text-align: right;
+		padding-bottom: 2px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		border-bottom: 1px solid #cfcfcf;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding: 55px;
+		padding-top: 20px;
+
+		& button {
+			align-self: flex-start;
+		}
+	}
+}
