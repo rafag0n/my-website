@@ -1,0 +1,40 @@
+$padding: 55px;
+$padding-mobile: 30px;
+
+.quote {
+	display: flex;
+	flex-direction: column;
+
+	&__title {
+		padding-top: 30px;
+		font-weight: 300;
+	}
+
+	&__author,
+	&__role {
+		padding: 0px;
+		margin: 0px;
+		align-self: flex-end;
+	}
+
+	&__author {
+		margin-top: 15px;
+	}
+
+	&__role {
+		margin-bottom: 40px;
+	}
+
+	&__list {
+		border-top: 1px solid #a7a5a5;
+		display: grid;
+	}
+
+	@media screen and (max-width: 1199px) {
+		padding: $padding-mobile;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding: $padding;
+	}
+}
