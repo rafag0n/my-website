@@ -2,16 +2,28 @@ $padding: 55px;
 $padding-mobile: 30px;
 
 .quote {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	column-gap: 25px;
+	grid-template-columns: 1fr min-content;
+	grid-template-areas:
+		'title title'
+		'quote quote'
+		'author photo'
+		'author-role photo';
 
 	&__title {
 		padding-top: 30px;
 		font-weight: 300;
+		grid-area: title;
+	}
+
+	&__quote {
+		grid-area: quote;
 	}
 
 	&__author,
 	&__role {
+		justify-self: flex-end;
 		padding: 0px;
 		margin: 0px;
 		align-self: flex-end;
@@ -19,15 +31,19 @@ $padding-mobile: 30px;
 
 	&__author {
 		margin-top: 15px;
+		grid-area: author;
 	}
 
 	&__role {
 		margin-bottom: 40px;
+		grid-area: author-role;
 	}
 
-	&__list {
-		border-top: 1px solid #a7a5a5;
-		display: grid;
+	&__photo {
+		grid-area: photo;
+		height: 80px;
+		width: 80px;
+		border-radius: 100px;
 	}
 
 	@media screen and (max-width: 1199px) {

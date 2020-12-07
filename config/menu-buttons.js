@@ -1,14 +1,10 @@
 export default [
 	{
-		name: 'sobre nós',
-		url: 'sobre',
-	},
-	{
 		name: 'projetos',
-		url: 'projetos',
+		url: '/works',
 	},
 	{
 		name: 'contato',
-		url: 'contato',
+		url: '/contato',
 	},
 ];

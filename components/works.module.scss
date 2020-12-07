@@ -13,7 +13,6 @@ $padding-sides-mobile: 30px;
 
 	&__more {
 		margin-top: 40px;
-		margin-bottom: 40px;
 		font-size: 16px;
 		font-weight: 300;
 		border: 1px solid #000000;
@@ -41,7 +40,7 @@ $padding-sides-mobile: 30px;
 		}
 	}
 
-	@media screen and (min-width: 800px) {
+	@media screen and (min-width: 700px) {
 		&__list {
 			grid-template-columns: repeat(2, 1fr);
 			row-gap: 40px;

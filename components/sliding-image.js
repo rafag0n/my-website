@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './sliding-image.scss';
+import PropTypes from 'prop-types';
 
 export default function SlidingImage({
 	speed = 1.0,
@@ -32,3 +33,9 @@ export default function SlidingImage({
 		</div>
 	);
 }
+
+SlidingImage.propTypes = {
+	speed: PropTypes.number,
+	imgUrl: PropTypes.string,
+	maxScroll: PropTypes.number,
+};

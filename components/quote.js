@@ -12,6 +12,7 @@ const Quote = () => {
 			<p className={styles.quote__quote}>{quote}</p>
 			<h4 className={styles.quote__author}>Rafael Gonçalves</h4>
 			<h5 className={styles.quote__role}>Arquiteto-Chefe</h5>
+			<img className={styles.quote__photo} src="/profile.jpg" />
 		</div>
 	);
 };
