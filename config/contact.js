@@ -1,7 +1,7 @@
 export const projectScopeOptions = [
 	{
 		value: 'ambientacao',
-		label: 'Projeto de ambientação de um ou mais ambientes',
+		label: 'Projeto de ambientação',
 	},
 	{
 		value: 'reforma',

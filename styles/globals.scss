@@ -59,6 +59,15 @@ button {
 	font-weight: 200;
 }
 
+input:focus {
+	outline: none;
+	text-decoration: none;
+}
+
+input {
+	font-size: inherit;
+}
+
 button:hover {
 	opacity: 0.5;
 }
