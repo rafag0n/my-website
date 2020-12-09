@@ -7,18 +7,18 @@ import SlidingImage from '../components/sliding-image';
 import ContactForm from '../components/contact-form';
 import Works from '../components/works';
 import Quote from '../components/quote';
+import Footer from '../components/footer';
 
 export default function Home() {
 	return (
 		<div className={styles.container}>
 			<Head>
-				<title>Create Next App</title>
+				<title>Rafael Gonçalves Arquitetura | Projetos</title>
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link
 					href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
 					rel="stylesheet"
 				/>
-				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={styles.main} data-testid="main">
 				<div className={styles.top_wrapper}>
@@ -28,6 +28,7 @@ export default function Home() {
 					<Quote />
 					<Works length={3} />
 					<ContactForm />
+					<Footer />
 				</div>
 			</main>
 		</div>

@@ -15,7 +15,7 @@ const ValidationError = ({ errors, field }) =>
 
 const Sent = () => {
 	return (
-		<div className={styles.contact_form}>
+		<div data-testid="contact_form__sent" className={styles.contact_form}>
 			<img
 				src="/mail-success.svg"
 				className={styles.contact_form__mailsuccess}
@@ -53,7 +53,7 @@ export default function ContactForm() {
 		return errors;
 	};
 
-	const onSubmit = async (values, { setSubmitting }) => {
+	let onSubmit = async function (values, { setSubmitting }) {
 		setSubmitting(true);
 		try {
 			await axios.post('/api/send-message', values);
@@ -88,6 +88,7 @@ export default function ContactForm() {
 				}) => (
 					<>
 						<form
+							id="contact-form"
 							className={styles.contact_form}
 							onSubmit={handleSubmit}
 						>
@@ -177,6 +178,7 @@ export default function ContactForm() {
 								/>
 							</div>
 							<input
+								data-testid="contact_form__submit"
 								className={styles.contact_form__submit}
 								type="submit"
 								value="Agendar"
@@ -189,6 +191,10 @@ export default function ContactForm() {
 		</div>
 	);
 }
+
+ContactForm.propTypes = {
+	isMock: PropTypes.bool,
+};
 
 ValidationError.propTypes = {
 	errors: PropTypes.object,

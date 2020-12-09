@@ -9,11 +9,14 @@ const sendRes = (res, status, responseJson) => {
 	res.end(JSON.stringify(responseJson));
 };
 
-export default function sendMessage(req, res) {
+export default async function sendMessage(req, res) {
 	try {
-		bot.sendMessage(process.env.TELEGRAM_CHAT_ID, JSON.stringify(req.body));
+		await bot.sendMessage(
+			process.env.TELEGRAM_CHAT_ID,
+			JSON.stringify(req.body)
+		);
 		sendRes(res, 200, { success: true });
-	} catch {
-		sendRes(res, 500, { success: false });
+	} catch (err) {
+		sendRes(res, 500, { success: false, err });
 	}
 }

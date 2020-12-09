@@ -5,6 +5,6 @@ export default [
 	},
 	{
 		name: 'contato',
-		url: '/contato',
+		url: '/#contact-form',
 	},
 ];

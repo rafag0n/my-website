@@ -1,0 +1,29 @@
+.footer {
+	background-color: gray;
+	display: grid;
+	padding: 50px;
+	padding-top: 100px;
+	align-content: center;
+	row-gap: 15px;
+	grid-template-areas:
+		'logo'
+		'address';
+
+	&__logo {
+		height: auto;
+		width: 200px;
+		fill: white;
+		grid-area: logo;
+	}
+
+	&__address {
+		grid-area: address;
+		letter-spacing: 2px;
+		text-decoration: none;
+		color: white;
+		font-weight: 300;
+		line-height: 20px;
+		font-size: 14px;
+		font-style: normal;
+	}
+}
