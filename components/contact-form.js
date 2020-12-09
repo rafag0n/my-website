@@ -3,6 +3,7 @@ import { Formik } from 'formik';
 import styles from './contact-form.module.scss';
 import MySelect from './my-select';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import { projectScopeOptions, projectTypeOptions } from '../config/contact';
 
 const ValidationError = ({ errors, field }) =>
@@ -52,10 +53,15 @@ export default function ContactForm() {
 		return errors;
 	};
 
-	const onSubmit = (values, { setSubmitting }) => {
+	const onSubmit = async (values, { setSubmitting }) => {
 		setSubmitting(true);
-		setSent(true);
-		setSubmitting(false);
+		try {
+			await axios.post('/api/send-message', values);
+			setSubmitting(false);
+			setSent(true);
+		} catch {
+			setSubmitting(true);
+		}
 	};
 
 	if (sent) return <Sent />;
