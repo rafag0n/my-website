@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "test": "jest",
-    "start": "next start -p $PORT",
+    "start": "NODE_ENV=production next start -p $PORT ./app",
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
