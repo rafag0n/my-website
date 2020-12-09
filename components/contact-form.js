@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik } from 'formik';
 import styles from './contact-form.module.scss';
 import MySelect from './my-select';
@@ -12,7 +12,25 @@ const ValidationError = ({ errors, field }) =>
 		<div />
 	);
 
+const Sent = () => {
+	return (
+		<div className={styles.contact_form}>
+			<img
+				src="/mail-success.svg"
+				className={styles.contact_form__mailsuccess}
+			/>
+			<h2>Recebemos sua mensagem!</h2>
+			<p>
+				Retornaremos sua mensagem via whatsapp em até 2 dias úteis para
+				agendarmos a primeira reunião.
+			</p>
+		</div>
+	);
+};
+
 export default function ContactForm() {
+	const [sent, setSent] = useState(false);
+
 	const initialValues = {
 		name: '',
 		city: '',
@@ -34,9 +52,13 @@ export default function ContactForm() {
 		return errors;
 	};
 
-	const onSubmit = (values) => {
-		console.log(values);
+	const onSubmit = (values, { setSubmitting }) => {
+		setSubmitting(true);
+		setSent(true);
+		setSubmitting(false);
 	};
+
+	if (sent) return <Sent />;
 
 	return (
 		<div className="contact">
@@ -44,6 +66,8 @@ export default function ContactForm() {
 				onSubmit={onSubmit}
 				initialValues={initialValues}
 				validate={validateErrors}
+				validateOnChange={false}
+				validateOnBlur={false}
 			>
 				{({
 					setFieldValue,
@@ -54,6 +78,7 @@ export default function ContactForm() {
 					handleBlur,
 					handleSubmit,
 					setFieldTouched,
+					isSubmitting,
 				}) => (
 					<>
 						<form
@@ -149,6 +174,7 @@ export default function ContactForm() {
 								className={styles.contact_form__submit}
 								type="submit"
 								value="Agendar"
+								disabled={isSubmitting}
 							/>
 						</form>
 					</>
@@ -161,4 +187,5 @@ export default function ContactForm() {
 ValidationError.propTypes = {
 	errors: PropTypes.object,
 	field: PropTypes.string,
+	shouldShowWarns: PropTypes.bool,
 };
