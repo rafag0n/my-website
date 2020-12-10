@@ -1,6 +1,6 @@
 export default [
 	{
-		name: 'projetos',
+		name: 'Portfolio',
 		url: '/works',
 	},
 	{

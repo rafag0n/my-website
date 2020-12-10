@@ -13,7 +13,7 @@ export default function Home() {
 	return (
 		<div className={styles.container}>
 			<Head>
-				<title>Rafael Gonçalves Arquitetura | Projetos</title>
+				<title>Rafael Gonçalves Arquitetura</title>
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link
 					href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
