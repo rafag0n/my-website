@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "test": "jest",
-    "start": "NODE_ENV=production next start -p $PORT ./app",
-    "heroku-postbuild": "npm run build"
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
