@@ -15,6 +15,17 @@ export default function SlidingImage({
 		}
 	};
 
+	const handleResize = () => {
+		if (window.innerWidth > 1200) {
+			setMarginLeft(0);
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
+
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
