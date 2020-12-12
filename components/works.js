@@ -8,10 +8,15 @@ const Works = ({ length }) => {
 	const renderProject = (project, i) => {
 		if ((i < length) | !length) {
 			return (
-				<div key={project.key}>
-					<h3 className={styles.works__name}>{project.name}</h3>
-					<img className={styles.works__img} src={project.imageUrl} />
-				</div>
+				<Link key={project.key} href={`/works/${i}`}>
+					<button>
+						<h3 className={styles.works__name}>{project.name}</h3>
+						<img
+							className={styles.works__img}
+							src={project.imageUrl}
+						/>
+					</button>
+				</Link>
 			);
 		}
 	};

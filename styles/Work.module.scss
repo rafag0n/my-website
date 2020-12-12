@@ -1,0 +1,64 @@
+.work {
+	display: grid;
+
+	@media screen and (min-width: 700px) {
+		width: 85%;
+		margin: auto;
+		margin-bottom: 150px;
+		margin-top: 50px;
+		align-items: flex-start;
+		grid-template-areas:
+			'name gallery-module'
+			'texts gallery-module';
+		column-gap: 50px;
+		grid-template-columns: auto 400px;
+		grid-template-rows: 150px auto;
+	}
+
+	&__name {
+		font-size: 22px;
+		font-weight: 400;
+		padding-bottom: 10px;
+		border-bottom: 1px solid gray;
+	}
+
+	ul {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	&__info {
+		li {
+			text-decoration: none;
+			list-style: none;
+			padding: 0px;
+			margin-left: 0px;
+			font-weight: 400;
+			color: rgb(79, 99, 165);
+			margin-bottom: 10px;
+		}
+
+		b {
+			font-weight: 300;
+			color: gray;
+			margin-right: 5px;
+		}
+	}
+
+	&__texts {
+		align-self: flex-start;
+		justify-self: flex-start;
+		grid-area: texts;
+		display: grid;
+		row-gap: 15px;
+	}
+
+	&__description {
+		font-size: 14px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 75%;
+		grid-template-columns: auto 500px;
+	}
+}
