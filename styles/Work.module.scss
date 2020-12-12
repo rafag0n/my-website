@@ -1,25 +1,52 @@
 .work {
 	display: grid;
+	align-items: flex-start;
 
-	@media screen and (min-width: 700px) {
+	@media screen and (max-width: 649px) {
+		grid-template-areas:
+			'gallery-module'
+			'name'
+			'texts';
+
+		&__name {
+			font-size: 22px;
+			font-weight: 400;
+			padding: 25px;
+			margin-bottom: 0px;
+			margin-top: 5px;
+		}
+
+		&__texts {
+			border: none;
+			padding: 25px;
+			padding-top: 0px;
+		}
+
+		&__description {
+			font-size: 16px;
+		}
+	}
+
+	@media screen and (min-width: 750px) {
 		width: 85%;
 		margin: auto;
 		margin-bottom: 150px;
 		margin-top: 50px;
-		align-items: flex-start;
 		grid-template-areas:
 			'name gallery-module'
 			'texts gallery-module';
 		column-gap: 50px;
 		grid-template-columns: auto 400px;
 		grid-template-rows: 150px auto;
-	}
 
-	&__name {
-		font-size: 22px;
-		font-weight: 400;
-		padding-bottom: 10px;
-		border-bottom: 1px solid gray;
+		&__name {
+			border-bottom: 1px solid gray;
+			padding-bottom: 10px;
+		}
+
+		&__description {
+			font-size: 14px;
+		}
 	}
 
 	ul {
@@ -51,10 +78,6 @@
 		grid-area: texts;
 		display: grid;
 		row-gap: 15px;
-	}
-
-	&__description {
-		font-size: 14px;
 	}
 
 	@media screen and (min-width: 1200px) {
